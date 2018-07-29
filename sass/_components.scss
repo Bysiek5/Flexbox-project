@@ -97,6 +97,10 @@
     &__icon-box {
         position: relative;
     }
+
+    &__icon-box:hover &__hidden {
+        display: block;
+    }
     
     &__icon {
         height: 2.25rem;
@@ -144,10 +148,14 @@
         background-color: var(--color-primary);
         position: absolute;
         top: 7rem;
-        left: 0rem;
+        right: 0;
         z-index: 1000;
+
+        @media only screen and (max-width: $bp-smallest) {
+            top: 3.5rem;
+        }
     }
-    // ADD QUERIES BELOW 500PX
+
     &__list {
         list-style: none;
     }
