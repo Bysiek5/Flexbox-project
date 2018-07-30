@@ -233,6 +233,8 @@ body {
     background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
     position: relative; }
+  .user-nav__icon-box:hover .user-nav__hidden {
+    display: block; }
   .user-nav__icon {
     height: 2.25rem;
     width: 2.25rem;
@@ -266,8 +268,11 @@ body {
     background-color: var(--color-primary);
     position: absolute;
     top: 7rem;
-    left: 0rem;
+    right: 0;
     z-index: 1000; }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav__hidden {
+        top: 3.5rem; } }
   .user-nav__list {
     list-style: none; }
   .user-nav__list-item {
